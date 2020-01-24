@@ -1,0 +1,22 @@
+	  
+	<fieldset>
+		<legend>S'inscrire</legend>
+			<form action="<?= $requestUrl ?>/signup" method="post" class="form-group">			
+				<div><label>Prénom</label>
+				<input class="form-control" type="text" name="first_name" required></div>
+
+				<div><label>Nom</label>
+				<input class="form-control" type="text" name="last_name" required></div>
+
+				<div><label>Email</label>
+				<input class="form-control" type="email" name="email" required></div>
+
+				<div><label>password</label>
+				<input class="form-control" type="password" name="password" required></div>	
+				<div><hr></div>	
+
+				<button type="submit" class="btn btn-success" >Soumettre</button>						
+			</form>
+	</fieldset>
+	
+

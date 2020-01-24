@@ -1,0 +1,15 @@
+
+
+<form class="form-group">
+    <input type="text" class="form-control" id="searchTerm" placeholder="Veuillez tapez un film...">
+</form>
+<div class="moviesGrid">
+    <div id="gallery"></div>
+</div>
+<script>
+
+$("#searchTerm").keyup(function() {
+    performSearch($("#searchTerm").val());
+});
+
+</script>

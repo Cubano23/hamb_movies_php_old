@@ -1,0 +1,15 @@
+
+<div id="id01" class="modal">		  
+	<fieldset>
+		<legend>création d'un article</legend>
+			<form action="<?= $requestUrl ?>/add" method="post" class="form">							
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>                
+				</div>
+				<div><label>Article</label>
+				<textarea placeholder="ici votre article...." name="post"  rows="5" cols="120"> </textarea>
+				<div class="button"><button type="submit" id="btn_add_article" >Enregistrer</button></div>						
+			</form>
+	</fieldset>
+</div>	
+
