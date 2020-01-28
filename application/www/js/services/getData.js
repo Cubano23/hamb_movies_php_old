@@ -22,7 +22,8 @@
                     newImg.src = "https://image.tmdb.org/t/p/w185" + value.results[i].poster_path; 
                     fragment.appendChild(newImg.cloneNode(true)); 
                     
-                    title.innerHTML = value.results[i].title;
+                    title.innerHTML = value.results[i].title + "<p>" + value.results[i].release_date + 
+                    "</p>" + "<p>Popularity:</p> " + "<div class='popularity'>" + value.results[i].popularity + "</div>" ;
                     fragment.appendChild(title.cloneNode(true)); 
 
                             
