@@ -7,9 +7,14 @@
 <div id="title-film"></div>
 
 <script>
-
+  
+performSearch("academy")
 $("#searchTerm").keyup(function() {
-    performSearch($("#searchTerm").val());
+    if($("#searchTerm").val() == ""){
+        performSearch("academy");
+    }else{
+        performSearch($("#searchTerm").val());    
+    }
 });
 
 </script>

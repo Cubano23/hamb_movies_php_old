@@ -31,13 +31,29 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 
 }
+header{
+	background-color:coral;
+	margin: 0;
+	border-radius: 0 0 10px 10px;
+}
 .nav-link:hover {
 	font-size: 30px;
-	color:#011120 !important;
+	color:cornflowerblue !important;
+  }
+  .fa-video{
+	color:cornflowerblue; 
   }
 .nav-link {   
-	color: #3F3F3F !important;
+	color: #3F3F3F;
   }
+.about{
+text-align: center;
+color: #666c6c;
+font-family: "cursive";
+}
+.about ul li{
+list-style: none;
+}
 footer {
 	display : table-row;
 	height: 100px; 
@@ -73,10 +89,23 @@ h2{
   color: red;
 
 }
-img{
+
+#imgSuccess{		
+	width: 60%;
+	margin:0 auto;
+}
+.imgSuccessDiv{
 	text-align: center;
-	width: 100%;
-	margin-bottom: 40px;
+}
+.email-ok{
+	display: block;
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 100px;
+
+}
+.fa-check-circle{
+	color:chartreuse;
 }
 footer div{	
 	margin:0 auto;
@@ -85,6 +114,10 @@ footer div{
 	background-color: #3F3F3F;
 
 }
+.btn-summetre{
+	margin-top: 10px;
+}
+
 /***MENU***/
 /* Icon 1 */
 
@@ -282,6 +315,7 @@ footer div{
 			padding: 10px;
 			margin: 10px;
 		  }
+	
 	  }
 
 	

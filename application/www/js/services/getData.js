@@ -1,7 +1,3 @@
-
-
-
-
    let fragment = document.createDocumentFragment(),
    newImg = document.createElement("img");
 
@@ -31,7 +27,7 @@
                 document.getElementById('gallery').appendChild(fragment);
                 document.getElementById('title-film').appendChild(fragment);
 
-                    console.log(value.results.length);   
+                    
                     console.log(value.results); 
                              
                

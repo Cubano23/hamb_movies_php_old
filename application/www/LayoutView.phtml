@@ -27,12 +27,11 @@
 <body>
 
 <!-- En-tête commune -->
-<header>
-          
+<header class="container">          
          <!--Navbar-->
         <nav class="navbar navbar-light amber lighten-4 mb-4">
             <!-- Navbar brand -->
-            <a class="navbar-brand" href="<?= $requestUrl ?>/">Hamb Movies Database</a>
+            <a class="navbar-brand" href="<?= $requestUrl ?>/"><i class="fas fa-video fa-3x"></i>&nbsp;Hamb Movies Database</a>
             <!-- Collapse button -->
             <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
             aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +45,13 @@
                             <a class="nav-link" href="<?= $requestUrl ?>/"><i class="fas fa-home"></i>&nbsp;&nbsp;Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $requestUrl ?>/films"><i class="far fa-newspaper"></i>&nbsp;&nbsp;Films</a>
+                            <a class="nav-link" href="<?= $requestUrl ?>/films"><i class="fas fa-film"></i>&nbsp;&nbsp;Films</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $requestUrl ?>/about"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;&Agrave; propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $requestUrl ?>/contact"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contact</a>
                         </li>
                         <li>
                             <a class="nav-link" href="<?= $requestUrl ?>/logout" id="logout"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Déconnexion </a>
@@ -73,7 +78,7 @@
 <!-- Pied de page commun -->
 <footer>
     <div></div>
-    <small>Réalisé avec&nbsp; <i class="fa fa-heart"></i>&nbsp; par Bruno Soares - &copy; - <?php echo date('Y');?></small>
+    <small>Hamb Movies Database Copyright All Rights Reserved &copy; - <?php echo date('Y');?></small>
 </footer>
 
 <!-- Code principal JavaScript de l'application -->
