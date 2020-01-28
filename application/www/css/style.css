@@ -255,18 +255,24 @@ footer div{
 	top: 21px;
 	left: 8px;
 	}
-	#gallery{
-		width: 120px;
-		height: 190px;
 
-	}
-	.moviesGrid{
+	#gallery{
 		display: grid !important;
 		grid-template-columns: repeat(8, 1fr);
 		grid-gap: 6px;
 		padding: 10px;
 		margin: 10px;
 	  }
+	  @media only screen and (max-width: 768px) {
+		#gallery{
+			display: grid !important;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 6px;
+			padding: 10px;
+			margin: 10px;
+		  }
+	  }
+
 	
 
 
