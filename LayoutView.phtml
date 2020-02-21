@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HAMB MOVIES DATABASE</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/font-awesome-4.3.0.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+    <!-- Librairie jQuery -->
+    <script src="<?= $wwwUrl ?>/libs/jQuery_v3.4.1.js"></script>
+
+    <!-- JavaScript de l'application -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="<?= $wwwUrl ?>/js/main.js"></script>
+    <script src="<?= $wwwUrl ?>/js/services/getData.js"></script>
+</head>
+<body>
+
+<!-- En-tête commune -->
+<header class="container-fluid">          
+         <!--Navbar-->
+        <nav class="navbar navbar-light amber lighten-4 mb-4">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="<?= $requestUrl ?>/"><i class="fas fa-video fa-3x"></i>&nbsp;Hamb Movies Database</a>
+            <!-- Collapse button -->
+            <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+            aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon1"><span></span><span></span><span></span></div>
+            </button>
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent20">           
+                <ul class="navbar-nav mr-auto">
+                    <?php if(isset($_SESSION) && count($_SESSION) > 0): ?>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="<?= $requestUrl ?>/"><i class="fas fa-home"></i>&nbsp;&nbsp;Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $requestUrl ?>/films"><i class="fas fa-film"></i>&nbsp;&nbsp;Films</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $requestUrl ?>/about"><i class="fas fa-info-circle"></i>&nbsp;&nbsp;&Agrave; propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $requestUrl ?>/contact"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Contact</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="<?= $requestUrl ?>/logout" id="logout"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Déconnexion </a>
+                        </li>
+                    <?php else:?>
+                        <li>
+                            <a class="nav-link" href="<?= $requestUrl ?>/login"><i class="fas fa-plug"></i>&nbsp;&nbsp;Se connecter </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="<?= $requestUrl ?>/signup"><i class="fas fa-user-plus"></i>&nbsp;&nbsp;S'inscrire </a>
+                        </li>
+                    <?php endif; ?>
+                    
+                </ul>
+            </div>
+        </nav> 
+       
+
+<!--/.Navbar-->
+</header>
+<!-- Affichage du template lié à la vue -->
+<main> 
+<div class="connected">
+    <?php if(isset($_SESSION) && count($_SESSION) > 0): ?>
+        <div></div>&nbsp;&nbsp;<small><?php echo  $_SESSION["first_name"]. " ".$_SESSION["last_name"] ?></small>
+    <?php endif; ?>
+</div>
+    <?php include $this->viewData['template']; ?>
+</main>
+
+<!-- Pied de page commun -->
+<footer>
+    <div></div>
+    <small>Hamb Movies Database Copyright All Rights Reserved &copy; - <?php echo date('Y');?></small>     
+</footer>
+
+<!-- Code principal JavaScript de l'application -->
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+
+</body>
+</html>
